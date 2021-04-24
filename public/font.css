@@ -1,0 +1,12 @@
+@font-face {
+	font-family: 'Metropolis';
+	src: url(`./fonts/Metropolis-Regular.otf`) format('opentype');
+}
+@font-face {
+	font-family: 'Metropolis';
+	src: url(`./fonts/Metropolis-Medium.otf`) format('opentype');
+}
+@font-face {
+	font-family: 'Metropolis';
+	src: url(`./fonts/Metropolis-Bold.otf`) format('opentype');
+}
