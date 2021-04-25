@@ -1,0 +1,165 @@
+.spinner-wrapper {
+	margin: 16px 0 36px;
+	.pointer {
+		position: relative;
+		z-index: 99;
+		.bar {
+			margin: 0 auto;
+			width: 31px;
+			height: 6px;
+			border-radius: 2px;
+			background-color: var(--cream_brulee);
+		}
+		.mark {
+			width: 0;
+			height: 0;
+			margin: -3px auto -18px;
+			border-left: 11px solid transparent;
+			border-right: 11px solid transparent;
+			border-top: 28px solid var(--cream_brulee);
+			background-color: transparent;
+		}
+	}
+	.wheel-shadow {
+		position: relative;
+		margin: 0 auto;
+		width: 267px;
+		height: 267px;
+		border-radius: 50%;
+		background: rgba(0, 0, 0, 0.06);
+		box-shadow: 0px 3.16862px 6.33724px rgba(0, 0, 0, 0.12);
+		.wheel {
+			width: 258px;
+			height: 258px;
+			border-radius: 50%;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			overflow: hidden;
+			transform: rotate(-36deg) translate(-50%, -50%);
+			transform-origin: 0% 0%;
+			.inner-wheel {
+				width: 100%;
+				height: 100%;
+				transition: all 6s cubic-bezier(0, 0.99, 0.44, 0.99);
+			}
+			.sec {
+				position: absolute;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 144px 61px 0;
+				transform-origin: 61px 144px;
+				left: 68px;
+				top: -15px;
+				opacity: 1;
+
+				&:nth-child(1) {
+					transform: rotate(45deg);
+					border-color: var(--camelot) transparent;
+					filter: drop-shadow(3.74199px 0px 3.74199px rgba(0, 0, 0, 0.25));
+				}
+				&:nth-child(2) {
+					transform: rotate(90deg);
+					border-color: var(--tawny_port) transparent;
+					filter: drop-shadow(0px 3.74199px 3.74199px rgba(0, 0, 0, 0.25));
+				}
+				&:nth-child(3) {
+					transform: rotate(135deg);
+					border-color: var(--wine_berry_1) transparent;
+					filter: drop-shadow(0px 3.74199px 3.74199px rgba(0, 0, 0, 0.25));
+				}
+				&:nth-child(4) {
+					transform: rotate(180deg);
+					border-color: var(--wine_berry_2) transparent;
+					filter: drop-shadow(-2px 0.74px 3.74199px rgba(0, 0, 0, 0.25));
+				}
+				&:nth-child(5) {
+					transform: rotate(225deg);
+					border-color: var(--camelot) transparent;
+					filter: drop-shadow(0px -1.871px 3.74199px rgba(0, 0, 0, 0.25));
+				}
+				&:nth-child(6) {
+					transform: rotate(270deg);
+					border-color: var(--tawny_port) transparent;
+					filter: drop-shadow(0px -1.871px 3.74199px rgba(0, 0, 0, 0.25));
+				}
+				&:nth-child(7) {
+					transform: rotate(315deg);
+					border-color: var(--wine_berry_1) transparent;
+					filter: drop-shadow(3px -5.81px 2px rgba(0, 0, 0, 0.25));
+				}
+				&:nth-child(8) {
+					transform: rotate(360deg);
+					border-color: var(--wine_berry_2) transparent;
+					filter: drop-shadow(0px 3.74199px 3.74199px rgba(0, 0, 0, 0.25));
+				}
+				.dots {
+					position: absolute;
+					bottom: 109px;
+					display: flex;
+					justify-content: space-between;
+					.dot {
+						width: 7px;
+						height: 7px;
+						background-color: var(--cream_brulee);
+						display: inline-block;
+						border-radius: 50%;
+						&-1 {
+							margin-left: -37px;
+						}
+						&-2 {
+							margin-right: -35px;
+						}
+					}
+				}
+				.text {
+					margin-top: -97px;
+					color: var(--white);
+					display: block;
+					font-size: 11px;
+					margin-left: -33px;
+					transform: rotate(-95deg);
+					width: 59px;
+					font-weight: 500;
+				}
+				&:nth-of-type(4) .text,
+				&:nth-of-type(5) .text,
+				&:nth-of-type(8) .text {
+					font-size: 13px;
+					margin-left: -37px;
+					transform: rotate(-97deg);
+				}
+			}
+			.spin-holder {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 65px;
+				height: 65px;
+				border-radius: 50%;
+				z-index: 1000;
+				background-color: var(--cream_brulee);
+				cursor: pointer;
+				user-select: none;
+				.label {
+					position: absolute;
+					top: 49%;
+					left: 50%;
+					transform: translate(-50%, -50%) rotate(36deg);
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 58px;
+					height: 58px;
+					font-weight: 600;
+					font-size: 18px;
+					border-radius: 50%;
+					background-color: var(--cream_brulee);
+					box-shadow: 0px 3.74199px 3.74199px rgba(89, 57, 0, 0.25);
+				}
+			}
+		}
+	}
+}
